@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+}
+.flex {
+    left: 0;
+    top: 0;
+    align-content: center;
+    display: inline-flex;
+    width: 50%;
+}
+@keyframes _scale {
+    0% {transform: scale(1)}
+    75%{transform: scale(2)}
+    100%{transform: scale(1.5)}
+}
+.scalable-image {
+    margin-top: 100px;
+    display: inline-flex;
+}
+.scalable-image > img {
+    width: 300px;
+    transition: 0.5s;
+}
+.scalable-image > img:hover {
+    animation: _scale 1s 1 ease-in-out;
+    transform: scale(1.5);
+}
+
+.show-nav {
+    border: none;
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    outline: none;
+}
+.show-nav > p {
+    display: none;
+    font: Roboto;
+    font-weight: bold;
+}
+.show-nav > img {
+    width: 75px;
+    transition-duration: 1s;
+}
+.show-nav > img:hover {
+    transform: rotate(900deg);
+    transition-duration: 1s;
+}
+.navbar {
+    display: none;    
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition-duration: 0.25s;
+    font-size: 1.5em;
+  }
+  
+  /* Change the link color on hover */
+  li a:hover {
+    background-color:red;
+    color: white;
+    transition-duration: 0.25s;
+  }
+  @keyframes move_nav {
+    0% {transform: translateX(-300px)}
+    100%{transform: translateX(0px)}
+  }
+  @keyframes hide_nav {
+      51%{transform: translateX(0px)}
+      100% {transform: translateX(-300px)}
+  }
+  @keyframes hide_button {
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(720deg)}
+    51%{transform: translateX(0px)}
+    100% {transform: translateX(-300px)}
+}
+form {
+    display: flex-item;
+    width: 50%;
+}
+
+input[type=submit] {
+    background-color: green;
+}
+@keyframes easter_egg {
+    0%{transform: rotate(-3600deg)}
+    100%{transform: rotate(3600deg)}
+}
